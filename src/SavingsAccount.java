@@ -10,7 +10,7 @@ class SavingsAccount extends Account {
     public void deposit(double amount) {
         if (amount > 0) {
             balance += amount;
-            transactionHistory.add("Deposited: ₹" + amount);
+            transactionHistory.add("Deposited: " + String.format("₹%.2f", amount));
             System.out.println("₹" + amount + " deposited successfully.");
         } else {
             System.out.println("Invalid deposit amount.");
